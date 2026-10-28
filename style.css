@@ -137,7 +137,8 @@ p { margin: 0; }
 .feature { position: relative; overflow: hidden; background: var(--navy); }
 .feature-media {
   position: absolute; inset: 0 0 0 auto; width: 60%;
-  background: url("assets/campus-photo.jpg") center/cover no-repeat;
+  /* Alternates kept in assets/: campus-photo.jpg (residence hall), student-housing.jpg (original AI render) */
+  background: url("assets/brick-apartments.jpg") center/cover no-repeat;
 }
 .feature-media::after {
   content: ""; position: absolute; inset: 0;
