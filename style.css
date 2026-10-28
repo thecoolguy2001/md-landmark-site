@@ -106,7 +106,8 @@ p { margin: 0; }
 .hero { position: relative; overflow: hidden; background: var(--ink); }
 .hero-media {
   position: absolute; inset: 0 0 0 auto; width: 62%;
-  background: url("assets/hero-building.jpg") center/cover no-repeat;
+  /* Original AI render kept at assets/hero-building.jpg — swap back here if preferred */
+  background: url("assets/hero-photo.jpg") center/cover no-repeat;
 }
 .hero-media::after {
   content: ""; position: absolute; inset: 0;
