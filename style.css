@@ -274,18 +274,3 @@ form .btn { justify-self: start; margin-top: 6px; }
 
 /* ---------- Partners ---------- */
 .section-sub { color: var(--muted); max-width: 560px; }
-.partner-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.partner-grid:empty { display: none; }
-.section-head:has(+ .partner-grid:empty) { margin-bottom: 0; }
-.partner {
-  min-height: 170px; display: grid; place-content: center; justify-items: center; gap: 10px;
-  padding: 28px 20px; text-align: center;
-  border: 1px solid var(--line); background: var(--navy);
-  transition: border-color .2s, transform .2s;
-}
-.partner:hover { border-color: var(--gold); transform: translateY(-2px); }
-.partner img { max-height: 64px; width: auto; object-fit: contain; }
-.partner strong { font-family: var(--display); font-weight: 500; font-size: 18px; }
-.partner small { color: var(--gold); font-size: 12px; text-transform: uppercase; letter-spacing: .14em; }
-@media (max-width: 1000px) { .partner-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .partner-grid { grid-template-columns: 1fr; } .partner { min-height: 130px; } }
