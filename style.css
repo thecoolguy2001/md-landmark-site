@@ -106,7 +106,7 @@ p { margin: 0; }
 .hero { position: relative; overflow: hidden; background: var(--ink); }
 .hero-media {
   position: absolute; inset: 0 0 0 auto; width: 62%;
-  /* Original AI render kept at assets/hero-building.jpg (also referenced by .band and contact.html) */
+  /* Original AI render kept at assets/hero-building.jpg (unused) */
   background: url("assets/hero-photo.jpg") center/cover no-repeat;
 }
 .hero-media::after {
