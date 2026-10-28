@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact | MD Landmark Group</title>
+<meta name="description" content="MD Landmark Group is an Atlanta-based real estate development company focused on student housing and community development.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html" aria-label="MD Landmark Group home"><img src="assets/logo.png" alt="MD Landmark Group — Real Estate, Development, Construction, Investments" width="920" height="563"></a>
+    <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="about.html#expertise">Our Expertise</a>
+        <a href="partners.html">Partners</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </div>
+      <a class="btn btn-gold" href="contact.html">Partner With Us</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="page-hero" style="--page-img:url('assets/hero-building.jpg')">
+  <div class="container">
+    <div class="eyebrow">Let&rsquo;s Connect</div>
+    <h1>Contact Us</h1>
+    <p>Have a student housing need, development opportunity, or partnership idea? We&rsquo;d welcome a conversation.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <div class="eyebrow">Start a Conversation</div>
+      <h2 style="font-size:clamp(28px,3.2vw,38px);text-transform:uppercase">We&rsquo;d Love to Hear From You</h2>
+      <p>MD Landmark Group welcomes inquiries from universities, landowners, builders, investors, and prospective partners.</p>
+      <ul class="contact-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg><div><span>Location</span>Atlanta, Georgia</div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg><div><span>Email</span>Contact email coming soon</div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><div><span>Phone</span>Contact number coming soon</div></li>
+      </ul>
+      <p class="note">Please use the form as a draft layout for now. Online submissions will become available once a form service and business email are connected.</p>
+    </div>
+    <div class="form-card">
+      <h2>Send an Inquiry</h2>
+      <form id="inquiry-form">
+        <label for="f-name">Your Name<input id="f-name" required name="name" placeholder="Full name" autocomplete="name"></label>
+        <label for="f-email">Email Address<input id="f-email" required type="email" name="email" placeholder="you@example.com" autocomplete="email"></label>
+        <label for="f-org">Organization<input id="f-org" name="organization" placeholder="School or company" autocomplete="organization"></label>
+        <label for="f-msg">Message<textarea id="f-msg" required name="message" placeholder="Tell us about your project"></textarea></label>
+        <button class="btn btn-gold" type="submit">Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+        <small class="form-note" id="form-note" aria-live="polite">Preview only &mdash; messages are not transmitted.</small>
+      </form>
+    </div>
+  </div>
+</section>
+<script>
+  document.getElementById('inquiry-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('form-note').textContent = 'This preview form is not connected yet. Please check back once the website is published with a contact service.';
+  });
+</script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <a href="index.html" aria-label="MD Landmark Group home"><img src="assets/logo.png" alt="MD Landmark Group" width="920" height="563" loading="lazy"></a>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html">Home</a><a href="about.html">About Us</a><a href="about.html#expertise">Our Expertise</a><a href="partners.html">Partners</a><a href="contact.html">Contact</a>
+    </nav>
+    <div>Atlanta, Georgia</div>
+    <small>&copy; 2026 MD Landmark Group. All rights reserved.</small>
+  </div>
+</footer>
+<script>
+  (function () {
+    var btn = document.getElementById('menu-toggle'), nav = document.getElementById('site-nav');
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+  })();
+</script>
+</body>
+</html>
