@@ -249,8 +249,8 @@ form .btn { justify-self: start; margin-top: 6px; }
   .hero-media::after { background: linear-gradient(0deg, var(--ink) 0%, rgba(5,13,28,0) 45%); }
   .feature-media::after { background: linear-gradient(0deg, var(--navy) 0%, rgba(10,23,48,0) 45%); }
   .hero, .feature { display: flex; flex-direction: column-reverse; }
-  .hero .container { padding-block: 8px 56px; }
-  .feature .container { padding-block: 8px 50px; }
+  .hero .container { padding-block: 48px 56px; }
+  .feature .container { padding-block: 56px 50px; }
 
   .services .container { grid-template-columns: repeat(2, 1fr); row-gap: 10px; }
   .service:nth-child(3) { border-left: 0; }
