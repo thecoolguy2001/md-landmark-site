@@ -51,45 +51,11 @@
     </div>
     <div class="form-card">
       <h2>Send an Inquiry</h2>
-      <form id="inquiry-form">
-        <label for="f-name">Your Name<input id="f-name" required name="name" placeholder="Full name" autocomplete="name"></label>
-        <label for="f-email">Email Address<input id="f-email" required type="email" name="email" placeholder="you@example.com" autocomplete="email"></label>
-        <label for="f-org">Organization<input id="f-org" name="organization" placeholder="School or company" autocomplete="organization"></label>
-        <label for="f-msg">Message<textarea id="f-msg" required name="message" placeholder="Tell us about your project"></textarea></label>
-        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-        <button class="btn btn-gold" type="submit">Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
-        <small class="form-note" id="form-note" aria-live="polite"></small>
-      </form>
+      <p>Email us about student housing needs, development opportunities, or partnerships, and our team will get back to you.</p>
+      <a class="btn btn-gold" href="mailto:contact@mdlandmarkgroup.com?subject=Website%20Inquiry">Email Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
-<script>
-  (function () {
-    var form = document.getElementById('inquiry-form'), note = document.getElementById('form-note');
-    var btn = form.querySelector('button[type="submit"]');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var data = Object.fromEntries(new FormData(form));
-      data._subject = 'Website inquiry from ' + data.name;
-      data._replyto = data.email;
-      data._template = 'table';
-      btn.disabled = true;
-      note.textContent = 'Sending\u2026';
-      fetch('https://formsubmit.co/ajax/contact@mdlandmarkgroup.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data)
-      }).then(function (r) { return r.json(); }).then(function (res) {
-        if (String(res.success) !== 'true') { console.warn('FormSubmit:', res.message); throw new Error(res.message); }
-        form.reset();
-        note.textContent = 'Thank you! Your message has been sent. We\u2019ll be in touch soon.';
-      }).catch(function (err) {
-        console.warn('Inquiry form error:', err);
-        note.innerHTML = 'Sorry, your message could not be sent. Please email us at <a href="mailto:contact@mdlandmarkgroup.com">contact@mdlandmarkgroup.com</a>.';
-      }).then(function () { btn.disabled = false; });
-    });
-  })();
-</script>
 </main>
 <footer class="site-footer">
   <div class="container">
