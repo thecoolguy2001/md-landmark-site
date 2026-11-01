@@ -200,6 +200,7 @@ p { margin: 0; }
 .contact-list li { display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-items: center; padding-block: 18px; border-bottom: 1px solid var(--line); }
 .contact-list svg { width: 26px; height: 26px; color: var(--gold); justify-self: center; }
 .contact-list span { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .16em; color: var(--gold); }
+.contact-list a:hover, .form-note a { color: var(--gold); }
 .note { border-left: 2px solid var(--gold); padding-left: 18px; color: var(--muted); font-size: 15px; }
 
 .form-card { border: 1px solid var(--line); background: var(--navy-2); padding: 40px 36px; }
